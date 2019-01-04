@@ -1,5 +1,5 @@
 import re
-import collections
+import collections 
 
 text = open('book.txt').read().lower()
 words = re.findall('\w+', text)
