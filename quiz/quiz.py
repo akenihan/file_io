@@ -1,5 +1,3 @@
-import difflib
-
 def show_menu():
     print("1. Ask questions")
     print("2. Add a question")
@@ -33,13 +31,7 @@ def ask_questions():
             print("right!")
             print(score)
         else:
-            if (sum([i[0] != ' '  for i in difflib.ndiff(guess, answer)]) / 2) <= 2:
-                print(sum([i[0] != ' '  for i in difflib.ndiff(guess, answer)]))
-                print("Spelled wrong, but right!")
-                score += 1
-                print(score)
-            else:
-                print("wrong!")
+            print("wrong!")
     
     print("You got {0} correct out of {1}".format(score, number_of_questions))
     
